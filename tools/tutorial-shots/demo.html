@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Nova Galaxy demo</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <style>
+    html, body { margin: 0; height: 100%; background: #040406; overflow: hidden; font-family: Inter, "Segoe UI", sans-serif; }
+    #app { position: fixed; inset: 0; }
+
+    /* ?chrome=1: a plain mock of an app window around the view (left ribbon, tab bar, command palette) */
+    #mock { display: none; }
+    body.chrome #mock { display: block; }
+    body.chrome #app { left: 48px; top: 40px; }
+    .rib { position: fixed; left: 0; top: 0; bottom: 0; width: 48px; background: #18181c; border-right: 1px solid #2a2a30; display: flex; flex-direction: column; align-items: center; gap: 6px; padding-top: 48px; box-sizing: border-box; z-index: 5; }
+    .rib b { width: 32px; height: 32px; border-radius: 7px; display: flex; align-items: center; justify-content: center; color: #9a9aa2; }
+    .rib b svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .rib b.on { background: #2c2c33; color: #fff; }
+    .rib b.on svg { filter: drop-shadow(0 0 4px rgba(139, 233, 255, 0.8)); color: #8be9ff; }
+    .rib-tip { position: fixed; left: 54px; top: 43px; background: #26262c; border: 1px solid #3a3a42; color: #e8e8ec; font-size: 12.5px; padding: 5px 9px; border-radius: 6px; z-index: 6; white-space: nowrap; }
+    .tabs { position: fixed; left: 48px; right: 0; top: 0; height: 40px; background: #121216; border-bottom: 1px solid #2a2a30; display: flex; align-items: flex-end; padding-left: 10px; z-index: 5; box-sizing: border-box; }
+    .tab { height: 32px; display: flex; align-items: center; gap: 8px; padding: 0 14px; color: #8a8a92; font-size: 12.5px; border-radius: 8px 8px 0 0; }
+    .tab.on { background: #040406; color: #f3f3f4; border: 1px solid #2a2a30; border-bottom: 0; }
+    .tab .x { color: #6c6c72; margin-left: 10px; font-size: 11px; }
+    .tab .st { color: #fff; text-shadow: 0 0 8px #8be9ff; }
+    .pal { position: fixed; left: 50%; top: 92px; transform: translateX(-28%); width: 420px; background: rgba(24, 24, 28, 0.96); border: 1px solid #3a3a42; border-radius: 10px; box-shadow: 0 18px 50px rgba(0, 0, 0, 0.7); z-index: 7; overflow: hidden; }
+    .pal-in { padding: 11px 14px; border-bottom: 1px solid #2e2e35; color: #f3f3f4; font-size: 14px; }
+    .pal-in span { color: #8be9ff; }
+    .pal-row { padding: 9px 14px; font-size: 13px; color: #a3a3a8; display: flex; justify-content: space-between; }
+    .pal-row.on { background: #2c2c33; color: #fff; }
+    .pal-row small { color: #6c6c72; font-size: 11px; }
+  </style>
+  <script>
+    if (/[?&]chrome=1/.test(location.search)) document.documentElement.classList.add('chrome-pending');
+  </script>
+</head>
+<body>
+  <div id="mock">
+    <div class="rib">
+      <b title="Files"><svg viewBox="0 0 24 24"><path d="M4 5h6l2 2h8v12H4z"/></svg></b>
+      <b title="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg></b>
+      <b title="Graph"><svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.2"/><circle cx="18" cy="6" r="2.2"/><circle cx="12" cy="17" r="2.2"/><path d="M8 8l3 7M16.5 7.5 13 15M8.2 7h7.6"/></svg></b>
+      <b title="Calendar"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></b>
+      <b class="on" id="rib-galaxy" title="Open Nova Galaxy"><svg viewBox="0 0 24 24"><path d="M9.94 15.5a2 2 0 0 0-1.44-1.44l-6.13-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0l1.58 6.14a2 2 0 0 0 1.44 1.44l6.14 1.58a.5.5 0 0 1 0 .96l-6.14 1.58a2 2 0 0 0-1.44 1.44l-1.58 6.13a.5.5 0 0 1-.96 0z"/><path d="M20 3v4M22 5h-4M4 17v2M5 18H3"/></svg></b>
+    </div>
+    <div class="tabs">
+      <div class="tab">Home<span class="x">✕</span></div>
+      <div class="tab on" id="tab-galaxy"><span class="st">✦</span>Nova Galaxy<span class="x">✕</span></div>
+    </div>
+    <div class="rib-tip" id="rib-tip">Open Nova Galaxy</div>
+    <div class="pal" id="palette">
+      <div class="pal-in">Open Nova<span>|</span></div>
+      <div class="pal-row on">Nova Galaxy: Open Nova Galaxy<small>Enter</small></div>
+      <div class="pal-row">Graph view: Open graph view</div>
+    </div>
+  </div>
+  <div id="app"></div>
+  <script>
+    if (document.documentElement.classList.contains('chrome-pending')) {
+      document.body.classList.add('chrome');
+      // the ribbon's tooltip sits level with the ✦ icon
+      const r = document.getElementById('rib-galaxy').getBoundingClientRect();
+      document.getElementById('rib-tip').style.top = r.top + r.height / 2 - 14 + 'px';
+    }
+  </script>
+  <script src="build/demo.bundle.js"></script>
+</body>
+</html>

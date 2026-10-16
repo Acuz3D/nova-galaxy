@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Install Nova Galaxy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --text: #f3f3f4; --muted: #a3a3a8; --dim: #6c6c72; --cyan: #8be9ff;
+      --line: rgba(255, 255, 255, 0.08); --line-strong: rgba(255, 255, 255, 0.16);
+      --serif: "Cormorant Garamond", Georgia, serif; --sans: Inter, "Segoe UI", sans-serif;
+    }
+    html, body { margin: 0; height: 100%; overflow: hidden; }
+    body {
+      background:
+        radial-gradient(ellipse 60% 45% at 22% 18%, rgba(159, 220, 255, 0.07), transparent 70%),
+        radial-gradient(ellipse 55% 50% at 82% 85%, rgba(201, 214, 255, 0.06), transparent 70%),
+        radial-gradient(ellipse 80% 70% at 50% 50%, rgba(255, 255, 255, 0.025), transparent 75%),
+        #040406;
+      color: var(--text); font-family: var(--sans);
+    }
+    #sky { position: fixed; inset: 0; }
+    .card {
+      position: absolute; left: 50%; top: 44%; transform: translate(-50%, -50%);
+      width: 1090px; padding: 34px 40px 30px; box-sizing: border-box;
+      background: rgba(12, 12, 16, 0.62); backdrop-filter: blur(12px);
+      border: 1px solid var(--line-strong); border-radius: 22px;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02), 0 0 40px rgba(255, 255, 255, 0.05), 0 30px 80px rgba(0, 0, 0, 0.6);
+    }
+    .brand { font-family: var(--serif); font-size: 38px; font-weight: 600; letter-spacing: 0.02em; }
+    .brand .st { color: #fff; margin-right: 12px; text-shadow: 0 0 12px #fff, 0 0 26px var(--cyan); font-size: 28px; vertical-align: 5px; }
+    .sub { color: var(--muted); font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; margin-top: 4px; }
+    .cols { display: grid; grid-template-columns: 240px 40px 360px 40px 1fr; align-items: center; margin-top: 30px; }
+    .col { border: 1px solid var(--line); border-radius: 16px; background: rgba(255, 255, 255, 0.025); padding: 18px; height: 340px; box-sizing: border-box; display: flex; flex-direction: column; }
+    .col h3 { margin: 0 0 14px; font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--dim); font-weight: 600; }
+    .arrow { color: var(--cyan); text-align: center; font-size: 22px; text-shadow: 0 0 10px var(--cyan); }
+    .file { display: flex; align-items: center; gap: 11px; padding: 11px 12px; border: 1px solid var(--line-strong); border-radius: 11px; margin-bottom: 9px; font-size: 14.5px; background: rgba(255, 255, 255, 0.03); }
+    .file svg, .tree svg { width: 18px; height: 18px; flex: none; fill: none; stroke: var(--muted); stroke-width: 1.6; stroke-linejoin: round; }
+    .file small { margin-left: auto; color: var(--dim); font-size: 11px; }
+    .tree { font-size: 14px; line-height: 1; }
+    .tree div { display: flex; align-items: center; gap: 9px; height: 34px; color: var(--muted); }
+    .tree div:nth-child(2) { padding-left: 22px; }
+    .tree div:nth-child(3) { padding-left: 44px; }
+    .tree div:nth-child(4) { padding-left: 66px; color: #fff; }
+    .tree div:nth-child(n+5) { padding-left: 92px; font-size: 13px; height: 27px; color: var(--cyan); }
+    .tree div:nth-child(4) svg { stroke: var(--cyan); filter: drop-shadow(0 0 4px var(--cyan)); }
+    .tree div:nth-child(n+5) svg { width: 15px; height: 15px; stroke: var(--cyan); }
+    .path { margin-top: auto; white-space: nowrap; font-family: Consolas, monospace; font-size: 11.5px; color: var(--muted); border: 1px dashed var(--line-strong); border-radius: 8px; padding: 7px 9px; }
+    .path b { color: var(--cyan); font-weight: 400; }
+    .crumb { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+    .crumb b { color: #fff; font-weight: 500; }
+    .row { display: flex; align-items: center; gap: 12px; padding: 12px 12px; border-radius: 11px; border: 1px solid var(--line); margin-bottom: 8px; }
+    .row .t { font-size: 14.5px; }
+    .row .t small { display: block; color: var(--dim); font-size: 11.5px; margin-top: 3px; }
+    .row.on { border-color: rgba(139, 233, 255, 0.45); background: rgba(139, 233, 255, 0.05); box-shadow: 0 0 18px rgba(139, 233, 255, 0.08); }
+    .tog { margin-left: auto; width: 40px; height: 22px; border-radius: 999px; background: #2a2a30; position: relative; flex: none; }
+    .tog::after { content: ''; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: #8a8a92; }
+    .tog.on { background: var(--cyan); box-shadow: 0 0 12px rgba(139, 233, 255, 0.6); }
+    .tog.on::after { left: 21px; background: #041014; }
+    .btn { margin-left: auto; font-size: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--text); flex: none; }
+    .foot { margin-top: 24px; display: flex; justify-content: space-between; color: var(--dim); font-size: 12.5px; }
+    .foot b { color: var(--muted); font-weight: 500; }
+    .foot .st { color: var(--cyan); text-shadow: 0 0 8px var(--cyan); }
+  </style>
+</head>
+<body>
+  <canvas id="sky"></canvas>
+  <div class="card">
+    <div class="brand"><span class="st">✦</span>Install Nova Galaxy</div>
+    <div class="sub">your vault as a solar system · three steps</div>
+    <div class="cols">
+      <div class="col" id="files">
+        <h3>From the latest release</h3>
+        <div class="file"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>main.js</div>
+        <div class="file"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>manifest.json</div>
+        <div class="file"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>styles.css</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="col" id="folder">
+        <h3>Into this folder</h3>
+        <div class="tree">
+          <div><svg viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v11H3z"/></svg>&lt;your vault&gt;</div>
+          <div><svg viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v11H3z"/></svg>.obsidian</div>
+          <div><svg viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v11H3z"/></svg>plugins</div>
+          <div><svg viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v11H3z"/></svg>nova-galaxy</div>
+          <div><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/></svg>main.js</div>
+          <div><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/></svg>manifest.json</div>
+          <div><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/></svg>styles.css</div>
+        </div>
+        <div class="path" id="path">&lt;your vault&gt;/.obsidian/plugins/<b>nova-galaxy</b>/</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="col" id="settings">
+        <h3>Then in Obsidian</h3>
+        <div class="crumb">Settings → <b>Community plugins</b></div>
+        <div class="row"><div class="t">Restricted mode<small>Turn on community plugins if asked</small></div><span class="btn">Turn on</span></div>
+        <h3 style="margin:10px 0 8px">Installed plugins</h3>
+        <div class="row on" id="toggle-row"><div class="t">Nova Galaxy<small>Your vault as a 3D solar system</small></div><span class="tog on" id="toggle"></span></div>
+        <div class="row"><div class="t" style="color:var(--dim)">Other plugins…</div><span class="tog"></span></div>
+      </div>
+    </div>
+    <div class="foot"><span><b>Desktop only.</b> Restart Obsidian if it doesn't show up in the list.</span><span>Then click <span class="st">✦</span> in the left ribbon</span></div>
+  </div>
+  <script>
+    // star dust and a few ✦ sparkles behind the card
+    const c = document.getElementById('sky'), g = c.getContext('2d');
+    c.width = innerWidth; c.height = innerHeight;
+    let s = 7;
+    const r = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+    for (let i = 0; i < 420; i++) {
+      g.fillStyle = `rgba(${r() < 0.12 ? '139,233,255' : '255,255,255'},${0.15 + r() * 0.55})`;
+      g.beginPath(); g.arc(r() * c.width, r() * c.height, 0.4 + Math.pow(r(), 3) * 1.4, 0, 7); g.fill();
+    }
+    const spark = (x, y, R) => {
+      const k = R * 0.14;
+      const glow = g.createRadialGradient(x, y, 0, x, y, R * 1.1);
+      glow.addColorStop(0, 'rgba(255,255,255,0.35)'); glow.addColorStop(1, 'rgba(255,255,255,0)');
+      g.fillStyle = glow; g.fillRect(x - R * 1.1, y - R * 1.1, R * 2.2, R * 2.2);
+      g.fillStyle = '#fff'; g.beginPath(); g.moveTo(x, y - R);
+      g.quadraticCurveTo(x + k, y - k, x + R, y); g.quadraticCurveTo(x + k, y + k, x, y + R);
+      g.quadraticCurveTo(x - k, y + k, x - R, y); g.quadraticCurveTo(x - k, y - k, x, y - R); g.fill();
+    };
+    [[90, 90, 11], [1180, 70, 8], [1210, 720, 13], [60, 690, 7], [640, 40, 5], [1240, 380, 6], [30, 380, 5], [700, 770, 6]].forEach(([x, y, R]) => spark(x, y, R));
+  </script>
+</body>
+</html>

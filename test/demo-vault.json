@@ -1,0 +1,764 @@
+{
+ "files": [
+  {
+   "path": "Home.md",
+   "name": "Home",
+   "ctime": 1780069354020,
+   "mtime": 1792167154020,
+   "tags": [
+    "home"
+   ]
+  },
+  {
+   "path": "Inbox.md",
+   "name": "Inbox",
+   "ctime": 1780931134020,
+   "mtime": 1792078534020,
+   "tags": []
+  },
+  {
+   "path": "Shopping list.md",
+   "name": "Shopping list",
+   "ctime": 1791383314020,
+   "mtime": 1791989914020,
+   "tags": []
+  },
+  {
+   "path": "Quotes I like.md",
+   "name": "Quotes I like",
+   "ctime": 1786110694020,
+   "mtime": 1789568494020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Garden Planner/Garden Planner - Overview.md",
+   "name": "Garden Planner - Overview",
+   "ctime": 1781788474020,
+   "mtime": 1792071874020,
+   "tags": [
+    "garden"
+   ]
+  },
+  {
+   "path": "Projects/Garden Planner/Bed layout.md",
+   "name": "Bed layout",
+   "ctime": 1781959054020,
+   "mtime": 1791119254020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Garden Planner/Planting calendar.md",
+   "name": "Planting calendar",
+   "ctime": 1782043234020,
+   "mtime": 1791808234020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Garden Planner/Tomatoes.md",
+   "name": "Tomatoes",
+   "ctime": 1782645814020,
+   "mtime": 1791892414020,
+   "tags": [
+    "garden",
+    "tomatoes"
+   ]
+  },
+  {
+   "path": "Projects/Garden Planner/Seeds to buy.md",
+   "name": "Seeds to buy",
+   "ctime": 1783507594020,
+   "mtime": 1791630994020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Garden Planner/Pests and fixes.md",
+   "name": "Pests and fixes",
+   "ctime": 1783937374020,
+   "mtime": 1790851174020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Garden Planner/Watering schedule.md",
+   "name": "Watering schedule",
+   "ctime": 1784367154020,
+   "mtime": 1791453754020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Garden Planner/Work log/Garden Planner work log - 2026-10-12 - raised beds.md",
+   "name": "Garden Planner work log - 2026-10-12 - raised beds",
+   "ctime": 1791708934020,
+   "mtime": 1791710734020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Garden Planner/Work log/Garden Planner work log - 2026-10-16 - autumn planting.md",
+   "name": "Garden Planner work log - 2026-10-16 - autumn planting",
+   "ctime": 1792052314020,
+   "mtime": 1792054114020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Recipes/Recipes - Overview.md",
+   "name": "Recipes - Overview",
+   "ctime": 1783496494020,
+   "mtime": 1791965494020,
+   "tags": [
+    "cooking"
+   ]
+  },
+  {
+   "path": "Projects/Recipes/Tomato sauce.md",
+   "name": "Tomato sauce",
+   "ctime": 1783667074020,
+   "mtime": 1791876874020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Recipes/Weeknight pasta.md",
+   "name": "Weeknight pasta",
+   "ctime": 1783837654020,
+   "mtime": 1791529054020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Recipes/Curry night.md",
+   "name": "Curry night",
+   "ctime": 1785217834020,
+   "mtime": 1791181234020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Recipes/Pancakes.md",
+   "name": "Pancakes",
+   "ctime": 1785683614020,
+   "mtime": 1790437414020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Recipes/Meal plan.md",
+   "name": "Meal plan",
+   "ctime": 1786977394020,
+   "mtime": 1791990394020,
+   "tags": [
+    "cooking"
+   ]
+  },
+  {
+   "path": "Projects/Recipes/Sourdough starter.md",
+   "name": "Sourdough starter",
+   "ctime": 1788703174020,
+   "mtime": 1788704974020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Reading List/Reading List - Overview.md",
+   "name": "Reading List - Overview",
+   "ctime": 1785244954020,
+   "mtime": 1791813154020,
+   "tags": [
+    "books"
+   ]
+  },
+  {
+   "path": "Projects/Reading List/Currently reading.md",
+   "name": "Currently reading",
+   "ctime": 1785415534020,
+   "mtime": 1791810934020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Reading List/Want to read.md",
+   "name": "Want to read",
+   "ctime": 1785586114020,
+   "mtime": 1791376714020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Reading List/Finished 2026.md",
+   "name": "Finished 2026",
+   "ctime": 1786102294020,
+   "mtime": 1790942494020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Reading List/Book notes - Dune.md",
+   "name": "Book notes - Dune",
+   "ctime": 1787828074020,
+   "mtime": 1791804274020,
+   "tags": [
+    "books",
+    "scifi"
+   ]
+  },
+  {
+   "path": "Projects/Reading List/Book notes - Atomic Habits.md",
+   "name": "Book notes - Atomic Habits",
+   "ctime": 1788257854020,
+   "mtime": 1790592454020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Study Notes/Study Notes - Overview.md",
+   "name": "Study Notes - Overview",
+   "ctime": 1786959634020,
+   "mtime": 1792059034020,
+   "tags": [
+    "study"
+   ]
+  },
+  {
+   "path": "Projects/Study Notes/Study plan.md",
+   "name": "Study plan",
+   "ctime": 1787130214020,
+   "mtime": 1791970414020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Study Notes/Linear algebra.md",
+   "name": "Linear algebra",
+   "ctime": 1787387194020,
+   "mtime": 1791881794020,
+   "tags": [
+    "study",
+    "maths"
+   ]
+  },
+  {
+   "path": "Projects/Study Notes/Physics basics.md",
+   "name": "Physics basics",
+   "ctime": 1787471374020,
+   "mtime": 1791965974020,
+   "tags": [
+    "study"
+   ]
+  },
+  {
+   "path": "Projects/Study Notes/Spanish vocab.md",
+   "name": "Spanish vocab",
+   "ctime": 1787814754020,
+   "mtime": 1791618154020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Study Notes/Exam dates.md",
+   "name": "Exam dates",
+   "ctime": 1787985334020,
+   "mtime": 1791270334020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Study Notes/Work log/Study Notes work log - 2026-10-13 - revision.md",
+   "name": "Study Notes work log - 2026-10-13 - revision",
+   "ctime": 1791784714020,
+   "mtime": 1791786514020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Study Notes/Work log/Study Notes work log - 2026-10-16 - practice exam.md",
+   "name": "Study Notes work log - 2026-10-16 - practice exam",
+   "ctime": 1792077694020,
+   "mtime": 1792079494020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Space Game/Space Game - Overview.md",
+   "name": "Space Game - Overview",
+   "ctime": 1788705874020,
+   "mtime": 1792163674020,
+   "tags": [
+    "gamedev"
+   ]
+  },
+  {
+   "path": "Projects/Space Game/Game design.md",
+   "name": "Game design",
+   "ctime": 1788790054020,
+   "mtime": 1792075054020,
+   "tags": [
+    "gamedev"
+   ]
+  },
+  {
+   "path": "Projects/Space Game/Enemies.md",
+   "name": "Enemies",
+   "ctime": 1788874234020,
+   "mtime": 1792159234020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Space Game/Levels.md",
+   "name": "Levels",
+   "ctime": 1789044814020,
+   "mtime": 1791984214020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Space Game/Controls.md",
+   "name": "Controls",
+   "ctime": 1789128994020,
+   "mtime": 1791722794020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Space Game/Art style.md",
+   "name": "Art style",
+   "ctime": 1789558774020,
+   "mtime": 1791893374020,
+   "tags": [
+    "art"
+   ]
+  },
+  {
+   "path": "Projects/Space Game/Space Game - Ideas.md",
+   "name": "Space Game - Ideas",
+   "ctime": 1789729354020,
+   "mtime": 1792063954020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Space Game/Work log/Space Game work log - 2026-10-14 - enemy waves.md",
+   "name": "Space Game work log - 2026-10-14 - enemy waves",
+   "ctime": 1791887134020,
+   "mtime": 1791888934020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Space Game/Work log/Space Game work log - 2026-10-15 - boss fight.md",
+   "name": "Space Game work log - 2026-10-15 - boss fight",
+   "ctime": 1791971314020,
+   "mtime": 1791973114020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Space Game/Work log/Space Game work log - 2026-10-17 - title screen.md",
+   "name": "Space Game work log - 2026-10-17 - title screen",
+   "ctime": 1792141894020,
+   "mtime": 1792143694020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Travel 2026/Travel 2026 - Overview.md",
+   "name": "Travel 2026 - Overview",
+   "ctime": 1790411674020,
+   "mtime": 1792055074020,
+   "tags": [
+    "travel"
+   ]
+  },
+  {
+   "path": "Projects/Travel 2026/Itinerary.md",
+   "name": "Itinerary",
+   "ctime": 1790495854020,
+   "mtime": 1792052854020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Travel 2026/Bookings.md",
+   "name": "Bookings",
+   "ctime": 1790580034020,
+   "mtime": 1791877834020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Travel 2026/Budget.md",
+   "name": "Budget",
+   "ctime": 1790664214020,
+   "mtime": 1791962014020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Travel 2026/Packing list.md",
+   "name": "Packing list",
+   "ctime": 1790834794020,
+   "mtime": 1791614194020,
+   "tags": []
+  },
+  {
+   "path": "Projects/Travel 2026/Japan travel guide.md",
+   "name": "Japan travel guide",
+   "ctime": 1790954974020,
+   "mtime": 1791820774020,
+   "tags": [
+    "travel"
+   ]
+  },
+  {
+   "path": "Projects/Travel 2026/Phrases for the trip.md",
+   "name": "Phrases for the trip",
+   "ctime": 1791125554020,
+   "mtime": 1791732154020,
+   "tags": []
+  }
+ ],
+ "links": {
+  "Home.md": {
+   "Projects/Garden Planner/Garden Planner - Overview.md": 1,
+   "Projects/Recipes/Recipes - Overview.md": 1,
+   "Projects/Reading List/Reading List - Overview.md": 1,
+   "Projects/Study Notes/Study Notes - Overview.md": 1,
+   "Projects/Space Game/Space Game - Overview.md": 1,
+   "Projects/Travel 2026/Travel 2026 - Overview.md": 1,
+   "Inbox.md": 1
+  },
+  "Inbox.md": {
+   "Projects/Space Game/Space Game - Ideas.md": 1
+  },
+  "Shopping list.md": {},
+  "Quotes I like.md": {},
+  "Projects/Garden Planner/Garden Planner - Overview.md": {
+   "Projects/Garden Planner/Bed layout.md": 1,
+   "Projects/Garden Planner/Planting calendar.md": 1,
+   "Projects/Garden Planner/Tomatoes.md": 1,
+   "Projects/Garden Planner/Seeds to buy.md": 1,
+   "Projects/Garden Planner/Pests and fixes.md": 1,
+   "Projects/Garden Planner/Watering schedule.md": 1
+  },
+  "Projects/Garden Planner/Bed layout.md": {
+   "Projects/Garden Planner/Planting calendar.md": 1
+  },
+  "Projects/Garden Planner/Planting calendar.md": {
+   "Projects/Garden Planner/Seeds to buy.md": 1,
+   "Projects/Garden Planner/Tomatoes.md": 1
+  },
+  "Projects/Garden Planner/Tomatoes.md": {
+   "Projects/Garden Planner/Pests and fixes.md": 1,
+   "Projects/Recipes/Tomato sauce.md": 1
+  },
+  "Projects/Garden Planner/Seeds to buy.md": {},
+  "Projects/Garden Planner/Pests and fixes.md": {},
+  "Projects/Garden Planner/Watering schedule.md": {},
+  "Projects/Garden Planner/Work log/Garden Planner work log - 2026-10-12 - raised beds.md": {
+   "Projects/Garden Planner/Bed layout.md": 1
+  },
+  "Projects/Garden Planner/Work log/Garden Planner work log - 2026-10-16 - autumn planting.md": {
+   "Projects/Garden Planner/Planting calendar.md": 1
+  },
+  "Projects/Recipes/Recipes - Overview.md": {
+   "Projects/Recipes/Meal plan.md": 1,
+   "Projects/Recipes/Tomato sauce.md": 1,
+   "Projects/Recipes/Weeknight pasta.md": 1,
+   "Projects/Recipes/Curry night.md": 1,
+   "Projects/Recipes/Pancakes.md": 1
+  },
+  "Projects/Recipes/Tomato sauce.md": {
+   "Projects/Recipes/Weeknight pasta.md": 1,
+   "Projects/Garden Planner/Tomatoes.md": 1
+  },
+  "Projects/Recipes/Weeknight pasta.md": {},
+  "Projects/Recipes/Curry night.md": {},
+  "Projects/Recipes/Pancakes.md": {},
+  "Projects/Recipes/Meal plan.md": {
+   "Projects/Recipes/Weeknight pasta.md": 1,
+   "Projects/Recipes/Curry night.md": 1,
+   "Projects/Recipes/Pancakes.md": 1
+  },
+  "Projects/Recipes/Sourdough starter.md": {},
+  "Projects/Reading List/Reading List - Overview.md": {
+   "Projects/Reading List/Currently reading.md": 1,
+   "Projects/Reading List/Want to read.md": 1,
+   "Projects/Reading List/Finished 2026.md": 1,
+   "Projects/Reading List/Book notes - Dune.md": 1,
+   "Projects/Reading List/Book notes - Atomic Habits.md": 1
+  },
+  "Projects/Reading List/Currently reading.md": {
+   "Projects/Reading List/Book notes - Dune.md": 1
+  },
+  "Projects/Reading List/Want to read.md": {
+   "Projects/Travel 2026/Japan travel guide.md": 1
+  },
+  "Projects/Reading List/Finished 2026.md": {
+   "Projects/Reading List/Book notes - Atomic Habits.md": 1
+  },
+  "Projects/Reading List/Book notes - Dune.md": {
+   "Projects/Space Game/Space Game - Ideas.md": 1
+  },
+  "Projects/Reading List/Book notes - Atomic Habits.md": {
+   "Projects/Study Notes/Study plan.md": 1
+  },
+  "Projects/Study Notes/Study Notes - Overview.md": {
+   "Projects/Study Notes/Study plan.md": 1,
+   "Projects/Study Notes/Exam dates.md": 1,
+   "Projects/Study Notes/Linear algebra.md": 1,
+   "Projects/Study Notes/Physics basics.md": 1,
+   "Projects/Study Notes/Spanish vocab.md": 1
+  },
+  "Projects/Study Notes/Study plan.md": {
+   "Projects/Study Notes/Linear algebra.md": 1,
+   "Projects/Study Notes/Physics basics.md": 1,
+   "Projects/Study Notes/Exam dates.md": 1
+  },
+  "Projects/Study Notes/Linear algebra.md": {
+   "Projects/Study Notes/Physics basics.md": 1
+  },
+  "Projects/Study Notes/Physics basics.md": {},
+  "Projects/Study Notes/Spanish vocab.md": {
+   "Projects/Travel 2026/Phrases for the trip.md": 1
+  },
+  "Projects/Study Notes/Exam dates.md": {},
+  "Projects/Study Notes/Work log/Study Notes work log - 2026-10-13 - revision.md": {
+   "Projects/Study Notes/Linear algebra.md": 1
+  },
+  "Projects/Study Notes/Work log/Study Notes work log - 2026-10-16 - practice exam.md": {
+   "Projects/Study Notes/Physics basics.md": 1
+  },
+  "Projects/Space Game/Space Game - Overview.md": {
+   "Projects/Space Game/Game design.md": 1,
+   "Projects/Space Game/Enemies.md": 1,
+   "Projects/Space Game/Levels.md": 1,
+   "Projects/Space Game/Controls.md": 1,
+   "Projects/Space Game/Art style.md": 1,
+   "Projects/Space Game/Space Game - Ideas.md": 1
+  },
+  "Projects/Space Game/Game design.md": {
+   "Projects/Space Game/Enemies.md": 1,
+   "Projects/Space Game/Levels.md": 1,
+   "Projects/Study Notes/Physics basics.md": 1,
+   "Projects/Space Game/Controls.md": 1
+  },
+  "Projects/Space Game/Enemies.md": {
+   "Projects/Space Game/Levels.md": 1
+  },
+  "Projects/Space Game/Levels.md": {},
+  "Projects/Space Game/Controls.md": {},
+  "Projects/Space Game/Art style.md": {
+   "Projects/Space Game/Game design.md": 1
+  },
+  "Projects/Space Game/Space Game - Ideas.md": {},
+  "Projects/Space Game/Work log/Space Game work log - 2026-10-14 - enemy waves.md": {
+   "Projects/Space Game/Enemies.md": 1
+  },
+  "Projects/Space Game/Work log/Space Game work log - 2026-10-15 - boss fight.md": {
+   "Projects/Space Game/Levels.md": 1
+  },
+  "Projects/Space Game/Work log/Space Game work log - 2026-10-17 - title screen.md": {
+   "Projects/Space Game/Art style.md": 1
+  },
+  "Projects/Travel 2026/Travel 2026 - Overview.md": {
+   "Projects/Travel 2026/Itinerary.md": 1,
+   "Projects/Travel 2026/Bookings.md": 1,
+   "Projects/Travel 2026/Budget.md": 1,
+   "Projects/Travel 2026/Packing list.md": 1,
+   "Projects/Travel 2026/Japan travel guide.md": 1,
+   "Projects/Travel 2026/Phrases for the trip.md": 1
+  },
+  "Projects/Travel 2026/Itinerary.md": {
+   "Projects/Travel 2026/Budget.md": 1,
+   "Projects/Travel 2026/Bookings.md": 1
+  },
+  "Projects/Travel 2026/Bookings.md": {},
+  "Projects/Travel 2026/Budget.md": {},
+  "Projects/Travel 2026/Packing list.md": {},
+  "Projects/Travel 2026/Japan travel guide.md": {
+   "Projects/Travel 2026/Itinerary.md": 1
+  },
+  "Projects/Travel 2026/Phrases for the trip.md": {}
+ },
+ "groups": [],
+ "excerpts": {
+  "Home.md": {
+   "text": "Welcome back. My projects: Garden Planner Recipes Reading List Study Notes Space Game Travel 2026 New stuff lands in Inbox first. #home",
+   "words": 22
+  },
+  "Inbox.md": {
+   "text": "Things to sort later: a boss idea for Space Game - Ideas, buy compost, ask about the train pass.",
+   "words": 19
+  },
+  "Shopping list.md": {
+   "text": "Milk, eggs, basil, rice, dish soap, AA batteries.",
+   "words": 8
+  },
+  "Quotes I like.md": {
+   "text": "\"The best time to plant a tree was twenty years ago. The second best time is now.\"",
+   "words": 17
+  },
+  "Projects/Garden Planner/Garden Planner - Overview.md": {
+   "text": "Planning the back garden: four raised beds, herbs by the door. See Bed layout, Planting calendar, Tomatoes, Seeds to buy, Pests and fixes and Watering schedule. #garden",
+   "words": 27
+  },
+  "Projects/Garden Planner/Bed layout.md": {
+   "text": "Bed 1 tomatoes and basil, bed 2 beans, bed 3 lettuce and radish, bed 4 strawberries. Timing is in Planting calendar.",
+   "words": 21
+  },
+  "Projects/Garden Planner/Planting calendar.md": {
+   "text": "March: sow tomatoes indoors. May: plant out after the last frost. Buy from Seeds to buy. Notes on Tomatoes.",
+   "words": 19
+  },
+  "Projects/Garden Planner/Tomatoes.md": {
+   "text": "Three kinds this year: cherry, roma and beefsteak. Watch for blight (Pests and fixes). Extras go into Tomato sauce. #garden #tomatoes",
+   "words": 21
+  },
+  "Projects/Garden Planner/Seeds to buy.md": {
+   "text": "Cherry tomato, roma, dwarf beans, butterhead lettuce, Genovese basil.",
+   "words": 9
+  },
+  "Projects/Garden Planner/Pests and fixes.md": {
+   "text": "Slugs: copper tape. Aphids: soapy water. Blight: remove leaves early and water the soil, not the plant.",
+   "words": 17
+  },
+  "Projects/Garden Planner/Watering schedule.md": {
+   "text": "Every second morning, daily in a heatwave. Drip line on beds 1 and 2.",
+   "words": 14
+  },
+  "Projects/Garden Planner/Work log/Garden Planner work log - 2026-10-12 - raised beds.md": {
+   "text": "Built the last two raised beds and filled them with compost. Updated Bed layout.",
+   "words": 14
+  },
+  "Projects/Garden Planner/Work log/Garden Planner work log - 2026-10-16 - autumn planting.md": {
+   "text": "Planted garlic and broad beans. Moved the Planting calendar on a month.",
+   "words": 12
+  },
+  "Projects/Recipes/Recipes - Overview.md": {
+   "text": "Things I actually cook. Meal plan for the week, plus Tomato sauce, Weeknight pasta, Curry night and Pancakes. #cooking",
+   "words": 19
+  },
+  "Projects/Recipes/Tomato sauce.md": {
+   "text": "Garden tomatoes, garlic, olive oil, basil. Simmer 40 minutes. Freezes well. Goes on Weeknight pasta. Tomatoes from the garden.",
+   "words": 19
+  },
+  "Projects/Recipes/Weeknight pasta.md": {
+   "text": "Twenty minutes: pasta, sauce, spinach, parmesan. Double it for lunches.",
+   "words": 10
+  },
+  "Projects/Recipes/Curry night.md": {
+   "text": "Chickpea and spinach curry with rice. Toast the spices first.",
+   "words": 10
+  },
+  "Projects/Recipes/Pancakes.md": {
+   "text": "1 cup flour, 1 egg, 1 cup milk, pinch of salt. Rest the batter ten minutes.",
+   "words": 16
+  },
+  "Projects/Recipes/Meal plan.md": {
+   "text": "Mon Weeknight pasta, Wed Curry night, Sun Pancakes. #cooking",
+   "words": 9
+  },
+  "Projects/Recipes/Sourdough starter.md": {
+   "text": "Day 1: flour and water. Feed every day. Still not bubbly.",
+   "words": 11
+  },
+  "Projects/Reading List/Reading List - Overview.md": {
+   "text": "What I'm reading: Currently reading, Want to read, Finished 2026. Notes on Book notes - Dune and Book notes - Atomic Habits. #books",
+   "words": 23
+  },
+  "Projects/Reading List/Currently reading.md": {
+   "text": "Dune (page 310). See Book notes - Dune.",
+   "words": 8
+  },
+  "Projects/Reading List/Want to read.md": {
+   "text": "The Hobbit, Project Hail Mary, a good guide for Japan (Japan travel guide).",
+   "words": 13
+  },
+  "Projects/Reading List/Finished 2026.md": {
+   "text": "Atomic Habits, The Martian, Circe. Notes in Book notes - Atomic Habits.",
+   "words": 12
+  },
+  "Projects/Reading List/Book notes - Dune.md": {
+   "text": "Great desert world-building. The sandworms would make a fun enemy: Space Game - Ideas. #books #scifi",
+   "words": 16
+  },
+  "Projects/Reading List/Book notes - Atomic Habits.md": {
+   "text": "Make it easy, make it obvious. Tiny habits add up. Using this for my Study plan.",
+   "words": 16
+  },
+  "Projects/Study Notes/Study Notes - Overview.md": {
+   "text": "Semester notes. Study plan, Exam dates, Linear algebra, Physics basics, Spanish vocab. #study",
+   "words": 13
+  },
+  "Projects/Study Notes/Study plan.md": {
+   "text": "Two 45-minute blocks a day. Revise Linear algebra and Physics basics before the Exam dates.",
+   "words": 15
+  },
+  "Projects/Study Notes/Linear algebra.md": {
+   "text": "Vectors, matrices, dot and cross products. Rotation matrices show up in Physics basics. #study #maths",
+   "words": 15
+  },
+  "Projects/Study Notes/Physics basics.md": {
+   "text": "Velocity, acceleration, gravity, momentum. F = ma. #study",
+   "words": 8
+  },
+  "Projects/Study Notes/Spanish vocab.md": {
+   "text": "Hola, gracias, por favor, la cuenta. Handy list in Phrases for the trip.",
+   "words": 13
+  },
+  "Projects/Study Notes/Exam dates.md": {
+   "text": "Maths 4 Nov, Physics 9 Nov, Spanish oral 14 Nov.",
+   "words": 10
+  },
+  "Projects/Study Notes/Work log/Study Notes work log - 2026-10-13 - revision.md": {
+   "text": "Two hours on Linear algebra. Matrices finally make sense.",
+   "words": 9
+  },
+  "Projects/Study Notes/Work log/Study Notes work log - 2026-10-16 - practice exam.md": {
+   "text": "Did a practice paper for Physics basics. 78%.",
+   "words": 8
+  },
+  "Projects/Space Game/Space Game - Overview.md": {
+   "text": "A small arcade space shooter. Game design, Enemies, Levels, Controls, Art style and Ideas. #gamedev",
+   "words": 15
+  },
+  "Projects/Space Game/Game design.md": {
+   "text": "Short runs, three lives, power-ups drop from Enemies. Ten Levels. Movement from Physics basics. Keys in Controls. #gamedev",
+   "words": 18
+  },
+  "Projects/Space Game/Enemies.md": {
+   "text": "Drones, shooters, and a boss every fifth level. Waves get faster in later Levels.",
+   "words": 14
+  },
+  "Projects/Space Game/Levels.md": {
+   "text": "1-3 asteroid belt, 4-6 nebula, 7-9 ice moons, 10 the mothership.",
+   "words": 11
+  },
+  "Projects/Space Game/Controls.md": {
+   "text": "Arrows or WASD to fly, Space to shoot, Shift to dash.",
+   "words": 11
+  },
+  "Projects/Space Game/Art style.md": {
+   "text": "Neon outlines on a black sky, soft glow. Matches the Game design mood board. #art",
+   "words": 15
+  },
+  "Projects/Space Game/Space Game - Ideas.md": {
+   "text": "Sandworm boss, a co-op mode, a daily challenge seed.",
+   "words": 9
+  },
+  "Projects/Space Game/Work log/Space Game work log - 2026-10-14 - enemy waves.md": {
+   "text": "Added wave spawning to Enemies.",
+   "words": 5
+  },
+  "Projects/Space Game/Work log/Space Game work log - 2026-10-15 - boss fight.md": {
+   "text": "First boss fight in level 5. Tuned Levels.",
+   "words": 8
+  },
+  "Projects/Space Game/Work log/Space Game work log - 2026-10-17 - title screen.md": {
+   "text": "New title screen in the Art style.",
+   "words": 7
+  },
+  "Projects/Travel 2026/Travel 2026 - Overview.md": {
+   "text": "Two weeks in Japan next spring. Itinerary, Bookings, Budget, Packing list, Japan travel guide, Phrases for the trip. #travel",
+   "words": 19
+  },
+  "Projects/Travel 2026/Itinerary.md": {
+   "text": "Tokyo 5 nights, Kyoto 4, Osaka 3, Hiroshima day trip. Costs in Budget, tickets in Bookings.",
+   "words": 16
+  },
+  "Projects/Travel 2026/Bookings.md": {
+   "text": "Flights booked. Hotels: Tokyo yes, Kyoto pending. Rail pass to buy.",
+   "words": 11
+  },
+  "Projects/Travel 2026/Budget.md": {
+   "text": "Flights 1400, hotels 1800, rail pass 450, food 900.",
+   "words": 9
+  },
+  "Projects/Travel 2026/Packing list.md": {
+   "text": "Passport, adapters, comfy shoes, rain jacket, small towel.",
+   "words": 8
+  },
+  "Projects/Travel 2026/Japan travel guide.md": {
+   "text": "Best areas to stay, temple tips, how the trains work. Shapes the Itinerary. #travel",
+   "words": 14
+  },
+  "Projects/Travel 2026/Phrases for the trip.md": {
+   "text": "Arigatou, sumimasen, eki wa doko desu ka.",
+   "words": 7
+  }
+ }
+}
