@@ -1,0 +1,378 @@
+/* Nova Galaxy — same look as Nova Grid, Nova Bot and the Nova Studios site:
+   near-black, frosted glass, thin white lines, soft white glow, cyan accent, serif headings. */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap');
+
+.nova-galaxy-view {
+  padding: 0 !important;
+  overflow: hidden !important;
+  position: relative;
+  background: #040406;
+}
+
+.ng-root {
+  --glass: rgba(12, 12, 16, 0.6);
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --text: #f3f3f4;
+  --muted: #a3a3a8;
+  --dim: #6c6c72;
+  --cyan: #8be9ff;
+  --serif: "Cormorant Garamond", "Sitka Banner", Constantia, Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 12px;
+  container-type: size;
+  user-select: none;
+  outline: none;
+}
+
+.ng-root button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  cursor: pointer;
+}
+
+.ng-canvas { position: absolute; inset: 0; display: block; cursor: grab; }
+.ng-canvas:active { cursor: grabbing; }
+.ng-root.is-hover .ng-canvas { cursor: pointer; }
+
+.ng-glass {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--line-strong);
+  border-radius: 16px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.02), 0 0 26px rgba(255, 255, 255, 0.04);
+}
+
+.ng-sec {
+  margin: 16px 0 8px;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dim);
+  display: flex;
+  justify-content: space-between;
+}
+.ng-sec em { font-style: normal; color: var(--muted); letter-spacing: 0.1em; }
+
+/* ----- labels floating in space ----- */
+
+.ng-labels { position: absolute; inset: 0; pointer-events: none; }
+.ng-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.35s var(--ease);
+  will-change: transform;
+}
+.ng-label.is-dim { opacity: 0.18; }
+.ng-label i { width: 5px; height: 5px; border-radius: 50%; flex: none; }
+.ng-label-planet span,
+.ng-label-core span {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #e9e9ec;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 0 14px rgba(255, 255, 255, 0.25);
+}
+.ng-label small { font-size: 9px; color: #8a8a90; letter-spacing: 0.06em; }
+.ng-label-core { flex-direction: column; gap: 1px; }
+.ng-label-core span {
+  font-family: var(--serif);
+  font-size: 15px;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.55);
+}
+.ng-label-moon {
+  max-width: 230px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  font-size: 10.5px;
+  color: rgba(243, 243, 244, 0.78);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 1), 0 0 2px rgba(0, 0, 0, 1);
+}
+.ng-label-moon.is-sel { color: #fff; text-shadow: 0 0 12px rgba(139, 233, 255, 0.8), 0 0 3px #000; }
+
+.ng-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(8, 8, 11, 0.85);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 0 16px rgba(139, 233, 255, 0.12);
+  font-size: 11.5px;
+  white-space: nowrap;
+  display: none;
+}
+.ng-tip small { display: block; font-size: 9.5px; color: var(--dim); letter-spacing: 0.08em; margin-top: 1px; }
+
+/* ----- top stat pills ----- */
+
+.ng-top {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  pointer-events: none;
+}
+.ng-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px 7px 11px;
+  border-radius: 999px;
+}
+.ng-pill span { color: var(--cyan); font-size: 10px; text-shadow: 0 0 8px var(--cyan); }
+.ng-pill small { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); font-weight: 600; }
+.ng-pill b { font-family: var(--serif); font-size: 17px; font-weight: 600; text-shadow: 0 0 12px rgba(255, 255, 255, 0.4); }
+
+/* ----- left dashboard ----- */
+
+.ng-left {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 232px;
+  max-height: calc(100% - 100px);
+  overflow-y: auto;
+  padding: 16px 16px 14px;
+  scrollbar-width: thin;
+}
+.ng-brand {
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.35);
+}
+.ng-brand-star { color: #fff; margin-right: 8px; font-size: 16px; vertical-align: 3px; text-shadow: 0 0 10px #fff, 0 0 22px var(--cyan); }
+.ng-brand small {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--sans);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  color: var(--dim);
+  text-shadow: none;
+  font-weight: 500;
+}
+.ng-big { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+.ng-big > div, .ng-mini > div {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 9px 11px;
+  background: rgba(255, 255, 255, 0.025);
+}
+.ng-big b {
+  display: block;
+  font-family: var(--serif);
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 600;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.45);
+}
+.ng-big small, .ng-mini small { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); font-weight: 600; }
+.ng-mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 6px; }
+.ng-mini > div { padding: 7px 8px; }
+.ng-mini b { display: block; font-family: var(--serif); font-size: 21px; line-height: 1.05; font-weight: 600; }
+.ng-mini b.is-on { color: var(--cyan); text-shadow: 0 0 12px rgba(139, 233, 255, 0.6); }
+.ng-mini small { font-size: 8px; letter-spacing: 0.14em; }
+
+.ng-chart { width: 100%; height: 40px; display: block; }
+.ng-chart rect { fill: rgba(255, 255, 255, 0.55); }
+.ng-chart rect.is-today { fill: var(--cyan); filter: drop-shadow(0 0 3px var(--cyan)); }
+
+.ng-planets { display: flex; flex-direction: column; gap: 2px; }
+.ng-root .ng-planet {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  padding: 6px 8px;
+  border-radius: 10px;
+  transition: background 0.15s;
+}
+.ng-root .ng-planet:hover { background: rgba(255, 255, 255, 0.05); }
+.ng-planet i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.ng-planet span { font-size: 12px; color: var(--text); line-height: 1.25; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ng-planet small { display: block; font-size: 9.5px; color: var(--dim); }
+
+/* ----- right panel (selected note) ----- */
+
+.ng-panel {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 300px;
+  max-height: calc(100% - 100px);
+  overflow-y: auto;
+  padding: 18px 18px 16px;
+  opacity: 0;
+  transform: translateX(18px);
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+  scrollbar-width: thin;
+}
+.ng-panel.is-open { opacity: 1; transform: none; pointer-events: auto; }
+.ng-root .ng-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  color: var(--dim);
+  font-size: 11px;
+}
+.ng-root .ng-close:hover { color: var(--text); background: rgba(255, 255, 255, 0.06); }
+.ng-kicker {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.ng-kicker i { width: 6px; height: 6px; border-radius: 50%; }
+.ng-title {
+  margin: 8px 24px 2px 0;
+  font-family: var(--serif);
+  font-size: 25px;
+  line-height: 1.12;
+  font-weight: 600;
+  color: var(--text);
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.3);
+}
+.ng-path { font-size: 10px; color: var(--dim); word-break: break-all; }
+.ng-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 14px; }
+.ng-grid > div { border: 1px solid var(--line); border-radius: 12px; padding: 8px 10px; background: rgba(255, 255, 255, 0.025); }
+.ng-grid small { display: block; font-size: 8.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); font-weight: 600; }
+.ng-grid b { font-family: var(--serif); font-size: 22px; font-weight: 600; line-height: 1.1; }
+.ng-summary { margin: 0; font-size: 12px; line-height: 1.55; color: #cfcfd4; user-select: text; }
+.ng-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.ng-tags span { font-size: 10.5px; padding: 3px 8px; border-radius: 999px; border: 1px solid rgba(139, 233, 255, 0.3); color: var(--cyan); background: rgba(139, 233, 255, 0.06); }
+.ng-meta { margin-top: 12px; font-size: 10px; color: var(--dim); }
+.ng-list { display: flex; flex-direction: column; gap: 1px; }
+.ng-root .ng-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  text-align: left;
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-size: 11.5px;
+  color: #d8d8dc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ng-root .ng-item:hover { background: rgba(255, 255, 255, 0.06); color: #fff; }
+.ng-item i { width: 5px; height: 5px; border-radius: 50%; flex: none; }
+.ng-root .ng-open {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.12);
+  transition: box-shadow 0.15s, background 0.15s;
+}
+.ng-root .ng-open:hover { background: rgba(255, 255, 255, 0.06); box-shadow: 0 0 16px rgba(255, 255, 255, 0.3); }
+
+/* ----- bottom search bar ----- */
+
+.ng-bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: min(600px, calc(100% - 32px));
+}
+.ng-bar { display: flex; align-items: center; gap: 4px; padding: 5px 5px 5px 14px; border-radius: 999px; }
+.ng-bar-star { color: var(--cyan); text-shadow: 0 0 8px var(--cyan); font-size: 12px; margin-right: 4px; }
+.ng-root .ng-search {
+  flex: 1;
+  min-width: 0;
+  height: 30px;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 12.5px;
+  padding: 0;
+}
+.ng-root .ng-search::placeholder { color: var(--dim); }
+.ng-root .ng-btn {
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  border: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+.ng-root .ng-btn:hover { color: #fff; border-color: var(--line-strong); }
+.ng-root .ng-btn.is-on { color: #fff; border-color: rgba(139, 233, 255, 0.5); box-shadow: 0 0 10px rgba(139, 233, 255, 0.25); }
+.ng-results {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  padding: 6px;
+  display: none;
+}
+.ng-results.is-open { display: block; }
+
+.ng-empty {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 18px;
+  pointer-events: none;
+}
+.ng-empty span { color: #fff; text-shadow: 0 0 10px #fff; }
+
+@container (max-width: 980px) { .ng-top { display: none; } }
+@container (max-width: 760px) { .ng-left { display: none; } .ng-panel { width: calc(100% - 28px); max-height: 45%; } }

@@ -1,0 +1,6 @@
+node_modules/
+test/vault.json
+test/harness.bundle.js
+test/shots/
+dist/
+vault-path.txt

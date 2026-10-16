@@ -1,0 +1,16 @@
+{
+  "name": "nova-galaxy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Obsidian plugin: your vault as a 3D solar system in the Nova style",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "install-plugin": "node tools/build.mjs --install",
+    "preview": "node tools/export-vault.mjs && node tools/build.mjs"
+  },
+  "dependencies": {
+    "esbuild": "^0.24.0",
+    "three": "^0.169.0"
+  }
+}
