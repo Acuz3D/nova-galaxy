@@ -1,7 +1,7 @@
 {
   "id": "nova-galaxy",
   "name": "Nova Galaxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "1.4.0",
   "description": "Your vault as a 3D solar system in the Nova style: Home is the sun, projects are planets, notes are moons.",
   "author": "Nova Studios",

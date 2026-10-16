@@ -1,6 +1,6 @@
 {
   "name": "nova-galaxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "description": "Obsidian plugin: your vault as a 3D solar system in the Nova style",

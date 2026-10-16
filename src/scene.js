@@ -701,8 +701,16 @@ export function createGalaxy(container, initialData, opts = {}) {
 
   /* ----- camera flights ----- */
 
+  // far enough to fit the whole system, further back in tall, narrow tabs
+  const homeDistance = () => (systemR * 1.35) / Math.min(1, camera.aspect * 1.15);
+
+  function placeHome() {
+    controls.target.set(0, 0, 0);
+    camera.position.set(0, 0.46, 1).normalize().multiplyScalar(homeDistance() * 0.95);
+  }
+
   function viewDistance(n) {
-    if (n.kind === 'core') return systemR * 1.35;
+    if (n.kind === 'core') return homeDistance();
     if (n.kind === 'planet') return n.project.ext * 3.4 + 20;
     return Math.max(55, (n.project ? n.project.ext : 30) * 2.2);
   }
@@ -873,7 +881,7 @@ export function createGalaxy(container, initialData, opts = {}) {
 
   bar.addEventListener('click', (e) => {
     const act = e.target.closest('[data-act]')?.dataset.act;
-    if (act === 'home') { deselect(); flyTo(nodes[0], systemR * 1.35); }
+    if (act === 'home') { deselect(); flyTo(nodes[0], homeDistance()); }
     if (act === 'pause') { paused = !paused; pauseBtn.textContent = paused ? 'Play' : 'Pause'; pauseBtn.classList.toggle('is-on', paused); }
     if (act === 'lonely') { lonelyMode = !lonelyMode; lonelyBtn.classList.toggle('is-on', lonelyMode); applyFocus(true); }
   });
@@ -905,7 +913,8 @@ export function createGalaxy(container, initialData, opts = {}) {
   canvas.addEventListener('pointerup', onUp);
   canvas.addEventListener('dblclick', onDbl);
   root.addEventListener('keydown', (e) => { if (e.key === 'Escape' && selected) deselect(); });
-  controls.addEventListener('start', () => { fly = null; });
+  let touched = false; // has the person moved the camera yet?
+  controls.addEventListener('start', () => { fly = null; touched = true; });
 
   /* ----- resize ----- */
 
@@ -919,6 +928,7 @@ export function createGalaxy(container, initialData, opts = {}) {
     camera.aspect = w / hh;
     camera.updateProjectionMatrix();
     uScale = hh / (2 * Math.tan((camera.fov * Math.PI) / 360));
+    if (!touched && !selected && !fly && sys) placeHome();
   }
   const ro = new ResizeObserver(resize);
   ro.observe(root);
@@ -1031,7 +1041,7 @@ export function createGalaxy(container, initialData, opts = {}) {
 
   resize();
   buildSystem(initialData);
-  camera.position.set(0, systemR * 0.55, systemR * 1.2);
+  placeHome();
   raf = requestAnimationFrame(frame);
 
   return {
